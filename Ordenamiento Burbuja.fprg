@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ordenamiento Burbuja"/>
+        <attribute name="authors" value="USUARIO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-06-05 05:46:42 p.&#8239;m."/>
+        <attribute name="created" value="VVNVQVJJTztDQVJMT1M7MjAyNi0wNi0wNTswNToxOToxNCBwLuKAr20uOzEwNjg0"/>
+        <attribute name="edited" value="VVNVQVJJTztDQVJMT1M7MjAyNi0wNi0wNTswNTo0Njo0MiBwLuKAr20uOzE7MTA3OTM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n&#250;mero" type="Real" array="True" size="10"/>
+            <declare name="auxiliar, n, i, j" type="Real" array="False" size=""/>
+            <assign variable="n" expression="10"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;Ingrese un n&#250;mero&quot;" newline="True"/>
+                <input variable="n&#250;mero [i]"/>
+            </for>
+            <for variable="i" start="0" end="n-2" direction="inc" step="1">
+                <for variable="j" start="i+1" end="n-1" direction="inc" step="1">
+                    <if expression="n&#250;mero [i] &lt; n&#250;mero[j]">
+                        <then>
+                            <assign variable="auxiliar" expression="n&#250;mero [i]"/>
+                            <assign variable="n&#250;mero[i]" expression="n&#250;mero[j]"/>
+                            <assign variable="n&#250;mero[j]" expression="auxiliar"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="n&#250;mero[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
